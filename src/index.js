@@ -1,21 +1,21 @@
 function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = response.data.temperature.current;
+  let temperature = response.data.main.temp;
   let cityElement = document.querySelector("#city");
-   let descriptionElement = document.querySelector("#description");
+  let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#time");
-  let date = new Date(response.data.time * 1000);
+  let date = new Date(response.data.dt * 1000); // Use dt instead of time
   let iconElement = document.querySelector("#icon");
 
-  cityElement.innerHTML = response.data.city;
-   timeElement.innerHTML = formatDate(date);
-  descriptionElement.innerHTML = response.data.condition.description;
-  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  cityElement.innerHTML = response.data.name; // Use name instead of city
+  timeElement.innerHTML = formatDate(date);
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = `${response.data.main.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
-iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+  iconElement.innerHTML = `<img src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png" class="weather-app-icon" />`;
 }
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -41,8 +41,8 @@ function searchCity(city) {
 let apiKey = "a298426875380d10eb5b024b34c1787c";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl)
-  .then(updateWeather);
+axios.get(apiUrl).then(refreshWeather);
+
 }
 function handleSearchSubmit(event) {
   event.preventDefault();
