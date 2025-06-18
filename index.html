@@ -6,40 +6,44 @@
     <title>weather app</title>
     <link rel="stylesheet" href="src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Handlee&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Handlee&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-   <header>
-    <form>
-        <input type="search" placeholder="Enter city name" id="search-input" required>
-        <input type="submit" value="Search"/>
-    </form>
-   </header>
-   <main>
-    <div>
-        <h1>
-            johannesburg
-        </h1>
-        <p>Tuesday 14:49, scattered cloude
-            <br/>humidity: 66%,wind: 3.13km/h
-    
-        </p>
-        </div>
-        <div>>🌤️ 12°C</div>
+    <div class="weather-app">
+        <header>
+            <form class="search-form">
+                <input type="search" placeholder="Enter city name" id="search-input" class="search-form-input" required>
+                <input type="submit" value="Search" class="search-form-button"/>
+            </form>
+        </header>
+        <main>
+            <div class="weather-app-data">
+                <div>
+                    <h1 class="weather-app-city">Johannesburg</h1>
+                    <p class="weather-app-details">
+                        Tuesday 14:49, scattered clouds
+                        <br/>
+                        <strong>Humidity: 66%, Wind: 3.13km/h</strong>
+                    </p>
+                </div>
+                <div class="weather-app-temperature-container">
+                    <div class="weather-app-icon">🌤️</div>
+                    <div class="weather-app-temperature">12</div>
+                    <div class="weather-app-unit">°C</div>
+                </div>
+            </div>
         </main>
-
-
-
-    <footer>code by Dorothy Nhlapo</footer>
-    <a href="https://github.com/Dorothy247">Dorothy Nhlapo</a>,code hosted in GitHub
-    Check out my GitHub profile!
-    <a href="https://github.com/Dorothy247/weather-app">Weather App</a>
-    Check out my weather app on GitHub!,and websit hosted in netify
-    <a href="https://fefe-weather-app.netlify.app/">on netify</a>
-    </footer>
+        <footer>
+            <p>
+                Code by <a href="https://github.com/Dorothy247">Dorothy Nhlapo</a>, code hosted in GitHub
+                <br/>
+                Check out my <a href="https://github.com/Dorothy247/weather-app">Weather App</a> on GitHub!
+                <br/>
+                Website hosted on <a href="https://fefe-weather-app.netlify.app/">Netlify</a>
+            </p>
+        </footer>
     </div>
     <script src="script.js"></script>
-    </body>
-    </html>
+</body>
+</html>
