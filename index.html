@@ -4,54 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weather app</title>
-     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/
+     <link rel="stylesheet" href="styles.css" type="text/css">
+
 </head>
 <body>
-    <div class="container">
-        <div class="search-box">
-            <input type="text" placeholder="Enter city name" id="city-input">
-            <button id="search-btn"><i class="fas fa-search"></i></button>
+    <div class="weather-app">
+    <header>
+      <h1>SheCodes</h1>
+      <form id="search-form">
+        <input type="text" placeholder="Enter a city.." id="city-input" />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+
+    <main>
+      <div class="current-weather">
+        <h2 id="city-name">San Francisco</h2>
+        <p id="weather-description">Tuesday 14:20, scattered clouds</p>
+        <p id="humidity-wind">Humidity: <span id="humidity">--</span>%, Wind: <span id="wind">--</span> km/h</p>
+        <div class="temperature">
+          <img id="weather-icon" src="" alt="weather icon" />
+          <span id="temperature">12</span>°C
         </div>
-        
-        <div class="weather-container">
-            <div class="weather-info">
-                <div class="location" id="location">--</div>
-                <div class="date" id="date">--</div>
-                <div class="temperature" id="temp">--°C</div>
-                <div class="weather-condition" id="condition">--</div>
-                <div class="weather-icon" id="icon">
-                    <i class="fas fa-sun"></i>
-                </div>
-            </div>
-       <div class="additional-info">
-                <div class="info-box">
-                    <i class="fas fa-wind"></i>
-                    <span id="wind">-- km/h</span>
-                </div>
-                <div class="info-box">
-                    <i class="fas fa-tint"></i>
-                    <span id="humidity">--%</span>
-                </div>
-                <div class="info-box">
-                    <i class="fas fa-cloud"></i>
-                    <span id="clouds">--%</span>
-                </div>
-            </div>
-        </div>
-    </div>
+      </div>
 
-    <script src="script.js"></script>      
+      <div class="forecast" id="forecast">
+      </div>
+    </main>
 
-
-<body>
-    <h1>Welcome to My Page</h1>
     <footer>code by Dorothy Nhlapo</footer>
     <a href="https://github.com/Dorothy247">Dorothy Nhlapo</a>,code hosted in GitHub
     Check out my GitHub profile!
     <a href="https://github.com/Dorothy247/weather-app">Weather App</a>
     Check out my weather app on GitHub!,and websit hosted in netify
     <a href="https://fefe-weather-app.netlify.app/">on netify</a>
-    
+    </footer>
+    </div>
+    <script src="script.js"></script>
     </body>
     </html>
