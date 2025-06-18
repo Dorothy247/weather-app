@@ -4,33 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weather app</title>
-     <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="src/style.css">
 
 </head>
 <body>
-    <div class="weather-app">
-    <header>
-      <h1>SheCodes</h1>
-      <form id="search-form">
-        <input type="text" placeholder="Enter a city.." id="city-input" />
-        <button type="submit">Search</button>
-      </form>
-    </header>
-
-    <main>
-      <div class="current-weather">
-        <h2 id="city-name">San Francisco</h2>
-        <p id="weather-description">Tuesday 14:20, scattered clouds</p>
-        <p id="humidity-wind">Humidity: <span id="humidity">--</span>%, Wind: <span id="wind">--</span> km/h</p>
-        <div class="temperature">
-          <img id="weather-icon" src="" alt="weather icon" />
-          <span id="temperature">12</span>°C
+   <header>
+    <form>
+        <input type="search" placeholder="Enter city name" id="search-input" required>
+        <input type="submit" value="Search"/>
+    </form>
+   </header>
+   <main>
+    <div>
+        <h1>
+            johannesburg
+        </h1>
+        <p>Tuesday 14:49, scattered cloude
+            <br/>humidity: 66%,wind: 3.13km/h
+    
+        </p>
         </div>
-      </div>
+        <div>>🌤️ 12°C</div>
+        </main>
 
-      <div class="forecast" id="forecast">
-      </div>
-    </main>
+
 
     <footer>code by Dorothy Nhlapo</footer>
     <a href="https://github.com/Dorothy247">Dorothy Nhlapo</a>,code hosted in GitHub
